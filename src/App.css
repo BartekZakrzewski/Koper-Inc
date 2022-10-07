@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Jura', sans-serif;
+}
+
+.nav{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: .5rem;
+}
+
+.logo-name{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.nav-el > a {
+    font-size: 2rem;
+}
+
+.nav-el:not(.lettter){
+    color: #000;
+    font-size: 1.7rem;
+}
+
+.lettter{
+    color: #800000;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
+
+.landing-page{
+    height: 100vh;
+    width: 100%;
+    background-image: url('./assets/1LOzdjecie.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5rem;
+}
+
+.hero-text{
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 900;
+}
+
+.button{
+    display: flex;
+    padding: .5rem;
+    background-color: #800000;
+    font-size: 3rem;
+    width: 25rem;
+    border-radius: 5rem;
+    justify-content: center;
+    color: rgba(225, 225, 225, 1);
+    cursor: pointer;
+    position: relative;
+    transition: transform 200ms ease;
+}
+
+.button span{
+    transition: transform 200ms ease;
+}
+
+.button::after{
+    content: ">";
+    position: relative;
+    transition: transform 200ms ease;
+}
+
+.button:hover::after{
+    transform: translateX(1rem);
+}
+
+.button:hover span{
+    transform: translateX(-1rem);
+}
+
+.on-load{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #800000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+
+    animation-name: land;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes land {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -100vh;
+    }
+}
