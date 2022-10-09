@@ -1,6 +1,6 @@
 {
     "redirects": [
-        { "source": "/", "destination": "/Home.tsx" },
-        { "source": "/sklep", "destination": "Shop.tsx" }
+        { "source": "/", "destination": "/" },
+        { "source": "/sklep", "destination": "/Shop.tsx" }
     ]
 }
