@@ -70,7 +70,7 @@ a{
 .landing-page{
     height: 100vh;
     width: 100%;
-    background-image: url('./assets/1LOzdjecie.jpg');
+    background-image: url('/assets/1LOzdjecie.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -198,7 +198,7 @@ textarea{
     align-items: center;
     justify-content: center;
     margin: auto;
-    
+
     overflow: hidden;
     position: relative;
 }
