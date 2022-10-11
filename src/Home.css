@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 
+:root{
+    --main-color: #530000;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.app{
-    width: 100%;
-}
-
-.App{
-    width: 100%;
 }
 
 html{
@@ -20,6 +16,7 @@ html{
 
 body{
     font-family: 'Jura', sans-serif;
+    overflow-x: hidden;
 }
 
 .nav{
@@ -30,11 +27,15 @@ body{
     list-style: none;
     justify-content: space-evenly;
     padding: .5rem;
-    transition: background-color 400ms ease;
+    background-color: transparent;
+    transition: all 400ms ease;
 }
 
 .scrolled{
-    background-color: #800000;
+    background-color: var(--main-color);
+}
+
+.scrolled-letter{
     color: #fff;
 }
 
@@ -48,12 +49,13 @@ body{
 }
 
 .nav-el:not(.lettter){
-    color: #000;
+    color: rgb(0, 0, 0);
     font-size: 1.7rem;
 }
 
-.lettter:not(.scrolled){
-    color: #800000;
+.lettter:not(.scrolled-letter){
+    color: var(--main-color);
+    background-color: transparent;
 }
 
 .lettter{
@@ -88,7 +90,8 @@ a{
 .button{
     display: flex;
     padding: .5rem;
-    background-color: #660101;
+    /*background-color: #660101;*/
+    background-color: var(--main-color);
     font-size: 3rem;
     width: 25rem;
     border-radius: 5rem;
@@ -124,14 +127,14 @@ form{
     padding: 2rem 3rem;
     border-radius: 50px;
     background: linear-gradient(225deg, #cacaca, #f0f0f0);
-    box-shadow:  -20px 20px 60px #bebebe,
-                20px -20px 60px #ffffff;
+    box-shadow:  -20px 20px 60px #bebebe, 20px -20px 60px #ffffff;
 }
 
 .contact{
     padding: 5rem;
     display: flex;
     justify-content: center;
+    background-color: #fff;
 }
 
 .text{
@@ -155,8 +158,7 @@ input:not(.submit){
     width: 100%;
     border-radius: 50px;
     background: #383838 !important;
-    box-shadow: inset 22px -22px 44px #303030,
-                inset -22px 22px 44px #404040;
+    box-shadow: inset 22px -22px 44px #303030, inset -22px 22px 44px #404040;
 }
 
 input:not(.submit)::after{
@@ -195,9 +197,10 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin: auto;
+    
     overflow: hidden;
+    position: relative;
 }
 
 .submit::before{
@@ -220,6 +223,33 @@ textarea{
     transform: translateX(-20rem);
 }
 
+
+.on-load{
+    overflow-y: hidden;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: land;
+    animation-duration: 600ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.on-load > img{
+    width: 600px;
+    height: 200px;
+}
+
+
 /*
 Mobile: 360 x 640
 Mobile: 375 x 667
@@ -232,6 +262,18 @@ High-res laptop or desktop: 1920 x 1080
 */
 
 /* RESPONSIVE BREAK POINTS */
+@media screen and (max-width: 660px) {
+    .on-load > img{
+        width: 300px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contact{
+        padding: 3rem;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .landing-page{
@@ -251,11 +293,6 @@ High-res laptop or desktop: 1920 x 1080
     
 }
 
-@media screen and (max-width: 550px) {
-    .contact{
-        padding: 3rem;
-    }
-}
 
 @media screen and (max-width: 400px){
     .nav{
@@ -267,11 +304,6 @@ High-res laptop or desktop: 1920 x 1080
         justify-content: space-evenly;
         padding: .5rem;
         transition: background-color 400ms ease;
-    }
-    
-    .scrolled{
-        background-color: #800000;
-        color: #fff;
     }
     
     .logo-name{
@@ -314,26 +346,6 @@ High-res laptop or desktop: 1920 x 1080
 }
 
 /* ======================= */
-
-.on-load{
-    z-index: 999;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #800000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10rem;
-
-    animation-name: land;
-    animation-duration: 400ms;
-    animation-delay: 200ms;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-}
 
 @keyframes land {
     0%{

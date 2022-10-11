@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main-color: #530000;
+    --main-dark: #141414;
+    --sec-dark: #000;
+    --hemp-color: #ffffffbe;
+    --memp-color: #ffffff60;
+    --lemp-color: #ffffff38;
+    --temporary-color: #b00000ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 450px;
+    height: 150px;
+}
+@media screen and (max-width: 850px) {img{width: 300px;height: 100px;}}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--main-dark);
+}
+
+.Shop{
+    font-family: 'Poppins', sans-serif;
+}
+
+.shop-nav{
+    color: var(--hemp-color);
+    padding: 1rem;
+    position: relative;
+}
+
+.shop-nav::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: calc(100% - 2rem);
+    bottom: 0;
+    left: 1rem;
+    color: #fff;
+    background-color: #fff;
+}
+
+.shop-menu-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    list-style: none;
+}
+
+.shop-nav-el{
+    flex-grow: 7;
+    margin-right: 2rem;
+}
+
+.shop-nav-el a{
+    color: var(--hemp-color);
+    text-decoration: none;
+}
+
+.title{
+    color: #fff;
+    font-weight: 700;
+    font-size: 5rem;
+    cursor: default;
+}

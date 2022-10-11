@@ -1,4 +1,5 @@
 import Navel from '../components/Navel'
+import '../Home.css';
 import { useState, useEffect } from 'react'
 
 const Home = () => {
@@ -38,29 +39,29 @@ const Home = () => {
     return (
         <div className="App">
             <section className="on-load">
-                {/* <img src="KoperIncLogoPng.png" alt="Logo"/> */}
+                <img src={"/assets/KoperIncLogoPng.png"} alt="Logo"/>
             </section>
             <nav className={(window.scrollY >= 100) ? 'scrolled' : ''}>
                 <ul className={(window.scrollY >= 100) ? 'scrolled nav' : 'nav'}>
                     <Navel link="/sklep">
-                        <span className={(window.scrollY >= 100) ? 'scrolled lettter' : 'lettter'}>s</span>
+                        <span className={(window.scrollY >= 100) ? 'scrolled-letter lettter' : 'lettter'}>s</span>
                         klep
                     </Navel>
                     <Navel link="/">
                         <span className='logo-name'>
                             <span>
-                                <span className={(window.scrollY >= 100) ? 'scrolled lettter' : 'lettter'}>K</span>
+                                <span className={(window.scrollY >= 100) ? 'scrolled-letter lettter' : 'lettter'}>K</span>
                                 oper
                             </span>
                             <span>
-                                <span className={(window.scrollY >= 100) ? 'scrolled lettter' : 'lettter'}>I</span>
+                                <span className={(window.scrollY >= 100) ? 'scrolled-letter lettter' : 'lettter'}>I</span>
                                 nc
                             </span>
-                            <span className={(window.scrollY >= 100) ? 'scrolled lettter' : 'lettter'}>.</span>
+                            <span className={(window.scrollY >= 100) ? 'scrolled-letter lettter' : 'lettter'}>.</span>
                         </span>
                     </Navel>
                     <Navel link="#kontakt">
-                        <span className={(window.scrollY >= 100) ? 'scrolled lettter' : 'lettter'}>k</span>
+                        <span className={(window.scrollY >= 100) ? 'scrolled-letter lettter' : 'lettter'}>k</span>
                         ontakt
                     </Navel>
                 </ul>

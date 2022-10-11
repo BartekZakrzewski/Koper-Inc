@@ -1,4 +1,4 @@
-const Navbar = (props: any) => {
+const Navel = (props: any) => {
   return (
     <li className="nav-el">
         <a href={ props.link }>
@@ -8,4 +8,4 @@ const Navbar = (props: any) => {
   )
 }
 
-export default Navbar
+export default Navel
